@@ -4,6 +4,7 @@ read input
 #считываем выходную директорию
 read output
 #в папке input будем искать файлы до тех пор, пока будем находить новые
+# разрешим доступ ко всем файлам в input
 chmod 777 $input
 find $input -type f -name "*.*" | while read file;
  do
