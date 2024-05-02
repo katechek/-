@@ -1,3 +1,4 @@
+#!/bin/bash
 read input
 read output
 find $input -type f -name "*.txt" | while read file;
