@@ -9,12 +9,9 @@ jobs:
       - name: Install deps
         run: |
           if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
+          npm install 
           fi
+          npm ci
       - name: Lint
         run: nmp run lint
   
