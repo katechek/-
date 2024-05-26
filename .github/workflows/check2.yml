@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install deps
         run: npm init
-            npm ci
+       
           
       - name: Lint
         run: nmp run lint
