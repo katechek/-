@@ -48,7 +48,7 @@ public class CalculatorTest {
         long a = System.nanoTime();
         program("file.txt");
         long b = System.nanoTime();
-        assertTrue((b - a) < 15000000);
+        assertTrue((b - a) < 1);
     }
 
     @Test
