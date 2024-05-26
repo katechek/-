@@ -32,10 +32,14 @@ public class Calculator {
 
         } catch (NumberFormatException e) {
             throw new NumberFormatException("Ошибка в формате");
+            // Случай неверных входных данных
         } catch (IOException ex) {
             throw new IOException("Файл не найден");
+            // Случай неправильного названия файла
         }
     }
+
+    // Поиск максимального числа
     public static BigInteger max(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(Integer.MIN_VALUE);
         for (int i = 0; i < arr.size(); i++) {
@@ -46,7 +50,8 @@ public class Calculator {
         }
         return res;
     }
-
+    
+   // Поиск минимального числа
     public static BigInteger min(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(Integer.MAX_VALUE);
         for (int i = 0; i < arr.size(); i++) {
@@ -57,7 +62,8 @@ public class Calculator {
         }
         return res;
     }
-
+    
+    // Сумма всех элементов
     public static BigInteger sum(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(0);
         for (int i = 0; i < arr.size(); i++) {
@@ -65,7 +71,7 @@ public class Calculator {
         }
         return res;
     }
-
+    // Произведение всех элементов
     public static BigInteger mult(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(1);
         for (int i = 0; i < arr.size(); i++) {
