@@ -5,6 +5,7 @@ import org.junit.Test;
 
 
 import java.io.IOException;
+import org.junit.Assert;
 
 
 import java.math.BigInteger;
@@ -13,11 +14,7 @@ import java.util.List;
 
 
 
-import static junit.framework.TestCase.assertEquals;
-import static org.example.Calculator.program;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 
 public class CalculatorTest {
