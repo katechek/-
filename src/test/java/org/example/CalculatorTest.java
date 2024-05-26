@@ -2,7 +2,7 @@ package org.example;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.Timeout;
+
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -13,11 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import static junit.framework.Assert.assertTrue;
+
 import static junit.framework.TestCase.assertEquals;
 import static org.example.Calculator.program;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.Assert.*;
 
 
 public class CalculatorTest {
@@ -94,7 +93,6 @@ public class CalculatorTest {
 
     }
 
-    @Timeout(value = 0 , unit = TimeUnit.NANOSECONDS)
     @Test
     public void minTest(){
         all.add(1);
