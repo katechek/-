@@ -11,4 +11,4 @@
 2) проверяющие корректность работы функций сложения и умножения
 3) проверяющие скорость работы программы при увеличении размера входного файла (при увеличении количества чисел в файле)
 4) настроить CI-систему для проекта
-   ![Java CI with Maven](https://github.com/katechek/Programming-technology/tree/master/.github/workflows/check2.yml/badge.svg)
+   ![Java CI with Maven](https://github.com/katechek/Programming-technology/actions/workflows/check2.yml/badge.svg)
