@@ -7,7 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install deps
-        run: npm install --package-lock-only
+        run: npm init
+      - name: Install 2
+        run: npm update --package-lock-only
+      - name: Install 3
+        run: npm ci
             
        
           
