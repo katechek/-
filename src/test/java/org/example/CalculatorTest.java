@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class CalculatorTest {
     private List<Integer> all = new ArrayList<>();
 
-    /*@Before
+    @Before
     @Test
     public void programExceptionFormat() throws NumberFormatException {
         Throwable thrown = assertThrows(NumberFormatException.class, () -> {
@@ -25,7 +25,7 @@ public class CalculatorTest {
         });
         assertNotNull(thrown.getMessage());
 
-    }*/
+    }
 
     @Before
     @Test
