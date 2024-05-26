@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
     private List<Integer> all = new ArrayList<>();
-
+    // Случай неправильного формата входного файла
     @Before
     @Test
     public void programExceptionFormat() throws NumberFormatException {
@@ -26,6 +26,8 @@ public class CalculatorTest {
         assertNotNull(thrown.getMessage());
 
     }
+
+    // Неправильное название файла
 
     @Before
     @Test
@@ -37,6 +39,8 @@ public class CalculatorTest {
 
     }
 
+    // Тест, проверяющий то, что программа длится менее 150000000 наносекунд
+
     @Test
     public void TimeLimitProgram() throws IOException {
         long a = System.nanoTime();
@@ -44,6 +48,8 @@ public class CalculatorTest {
         long b = System.nanoTime();
         assertTrue((b - a) < 150000000);
     }
+
+    // Тесты, проверяющие время выполнения каждого из методов
 
     @Test
     public void durationTimeDifferenceTest(){
@@ -87,6 +93,8 @@ public class CalculatorTest {
 
 
     }
+
+    // Тесты, проверяющие корректность работы методов
 
 
     @Test
