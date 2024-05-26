@@ -2,10 +2,10 @@ package org.example;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import org.junit.jupiter.api.Timeout;
 
 import java.io.IOException;
-import org.junit.Assert;
+import java.util.concurrent.TimeUnit;
 
 
 import java.math.BigInteger;
@@ -13,8 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
-import static org.junit.Assert.*;
+import static junit.framework.Assert.assertTrue;
+import static junit.framework.TestCase.assertEquals;
+import static org.example.Calculator.program;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class CalculatorTest {
@@ -30,7 +33,15 @@ public class CalculatorTest {
 
     }
 
-    
+    @Before
+    @Test
+    public void programExceptionWrongFileName() throws IOException {
+        Throwable thrown = assertThrows(IOException.class, () -> {
+            program("wrongName.txt");
+        });
+        assertNotNull(thrown.getMessage());
+
+    }
 
     @Test
     public void TimeLimitProgram() throws IOException {
@@ -83,6 +94,7 @@ public class CalculatorTest {
 
     }
 
+    @Timeout(value = 0 , unit = TimeUnit.NANOSECONDS)
     @Test
     public void minTest(){
         all.add(1);
