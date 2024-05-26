@@ -19,6 +19,6 @@ jobs:
         to: ${{ secrets.TELEGRAM_CHAT_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: |
-          Тестирование ${{ job.status == 'success' && 'все тесты пройдены' || 'ошибка' }}.
+          Результат: ${{ job.status == 'success' && 'все тесты пройдены' || 'ошибка' }}.
   
   
