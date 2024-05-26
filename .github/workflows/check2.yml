@@ -16,6 +16,6 @@ jobs:
        
           
       - name: Lint
-        run: nmp run lint
+        run: npm run lint
   
   
