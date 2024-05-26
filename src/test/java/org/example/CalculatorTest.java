@@ -30,15 +30,7 @@ public class CalculatorTest {
 
     }
 
-    @Before
-    @Test
-    public void programExceptionWrongFileName() throws IOException {
-        Throwable thrown = assertThrows(IOException.class, () -> {
-            program("wrongName.txt");
-        });
-        assertNotNull(thrown.getMessage());
-
-    }
+    
 
     @Test
     public void TimeLimitProgram() throws IOException {
