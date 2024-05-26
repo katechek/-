@@ -14,3 +14,7 @@
 
    
    ![Java CI with Maven](https://github.com/katechek/Programming-technology/actions/workflows/check2.yml/badge.svg)
+
+
+# Зависимость скорости выполнения функции min() от количества символов во входном файле #
+![image](https://github.com/katechek/Programming-technology/assets/62990618/d3925bab-6207-48c3-ad98-ca107aaf8963)
