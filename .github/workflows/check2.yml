@@ -12,9 +12,6 @@ jobs:
         run: npm update --package-lock-only
       - name: Install 3
         run: npm ci
-            
-       
-          
       - name: Lint
         run: npm run lint
   
