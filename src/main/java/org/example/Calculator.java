@@ -1,13 +1,11 @@
 package org.example;
 
-import java.io.BufferedReader;
-
-import java.io.FileReader;
+import java.io.File;
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Scanner;
 
 public class Calculator {
     public static void main( String[] args ) throws IOException {
@@ -15,16 +13,16 @@ public class Calculator {
     }
 
     public static void program(String fileName) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+        try {
+            File file = new File(fileName);
+            Scanner scanner = new Scanner(file);
             List<Integer> l = new ArrayList<>();
-            String line = reader.readLine();
-            if (line.length() == 0){
+            if (!scanner.hasNextInt()){
                 throw new NumberFormatException("Ошибка");
             } else {
-                String[] str = line.split(" ");
-                int s = str.length;
-                for (String numberString : str) {
-                    l.add(Integer.parseInt(numberString));
+                while (scanner.hasNextInt()) {
+                    int number = scanner.nextInt();
+                    l.add(number);
                 }
                 System.out.println("Сумма: " + sum(l));
                 System.out.println("Минимум: " + min(l));
@@ -34,10 +32,14 @@ public class Calculator {
 
         } catch (NumberFormatException e) {
             throw new NumberFormatException("Ошибка в формате");
+            // Случай неверных входных данных
         } catch (IOException ex) {
             throw new IOException("Файл не найден");
+            // Случай неправильного названия файла
         }
     }
+
+    // Поиск максимального числа
     public static BigInteger max(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(Integer.MIN_VALUE);
         for (int i = 0; i < arr.size(); i++) {
@@ -49,6 +51,7 @@ public class Calculator {
         return res;
     }
 
+    // Поиск минимального числа
     public static BigInteger min(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(Integer.MAX_VALUE);
         for (int i = 0; i < arr.size(); i++) {
@@ -60,6 +63,7 @@ public class Calculator {
         return res;
     }
 
+    // Сумма всех элементов
     public static BigInteger sum(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(0);
         for (int i = 0; i < arr.size(); i++) {
@@ -67,7 +71,7 @@ public class Calculator {
         }
         return res;
     }
-
+    // Произведение всех элементов
     public static BigInteger mult(List<Integer> arr) {
         BigInteger res = BigInteger.valueOf(1);
         for (int i = 0; i < arr.size(); i++) {
